@@ -1,18 +1,27 @@
 const cronometro = document.querySelector('.cronometro');
+cronometro.innerHTML = '00:00:00'
 
 let t = 0;
 let idTimer;
+
+function estiloNormal() {
+    cronometro.classList.remove('timer-parado');
+}
+
+function estiloParado(){
+    cronometro.classList.add('timer-parado');
+}
 
 function limparTimer(){
     cronometro.innerHTML = '';
 }
 
-function adicionaTimer(){
-     const hora = incrementaTimer();
+function adicionarTimer(){
+     const hora = incrementarTimer();
      cronometro.innerHTML = hora;
 }
 
-function incrementaTimer(){
+function incrementarTimer(){
     const hora = timer(t);
     t += 1000;
     return hora; 
@@ -29,22 +38,33 @@ function timer(t) {
 
 }
 
-function inciarCronometro() {
-    
+function inciarTimer() {
+    estiloNormal();
+    idTimer = setInterval(adicionarTimer,1000);
+}
+
+function pararTimer(){
+    estiloParado();
+    clearInterval(idTimer);
+}
+function zerarTimer(){
+    estiloNormal();
+    cronometro.innerHTML = '00:00:00';
+    t = 0;
 }
 
 document.addEventListener('click',(event) => {
     const el = event.target;
 
     if(el.classList.contains('btn-iniciar')){
-        idTimer = setInterval(incrementaTimer,1000);
+        inciarTimer();
     }
 
     if(el.classList.contains('btn-parar')){
-        console.log('Parar!');
+        pararTimer();
     }
 
     if(el.classList.contains('btn-zerar')){
-        console.log('Zerar!');
+        zerarTimer();
     }
 });

@@ -33,16 +33,18 @@
     margin-top: 50px;
 }
 
-.cronometro-normal {
-    font-size: 35px;
+.cronometro {
+    background-color: white;
+    color:rgb(2, 2, 119);
+    font-size: 40px;
     font-weight: bold;
-    color:rgb(0, 0, 255);
 }
 
-.cronometro-parado {
-    font-size: 35px;
+.timer-parado {
+    background-color: white;
+    color:rgb(119, 2, 2);
+    font-size: 40px;
     font-weight: bold;
-    color:rgb(255, 0, 0); 
 }
 
 
@@ -64,5 +66,5 @@
 }
 
 .container button:active {
-    border: 1px solid rgb(2, 2, 168);
+    border: 2px solid rgb(0, 0, 0);
 }

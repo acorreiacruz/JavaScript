@@ -49,6 +49,7 @@ function pararTimer(){
 }
 function zerarTimer(){
     estiloNormal();
+    clearInterval(idTimer);
     cronometro.innerHTML = '00:00:00';
     t = 0;
 }

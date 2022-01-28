@@ -33,7 +33,7 @@
     margin-top: 50px;
 }
 
-.cronometro {
+.timer {
     background-color: white;
     color:rgb(2, 2, 119);
     font-size: 40px;
@@ -67,4 +67,25 @@
 
 .container button:active {
     border: 2px solid rgb(0, 0, 0);
+}
+
+.configuracoes {
+    background-color: white;
+}
+
+.configuracoes input{
+    background-color: white;
+    font-weight: bold;
+    width: 35px;
+    margin: 20px 20px 0px 0px;  
+    border: 1px solid black;
+    border-radius: 3px;
+
+}
+
+.configuracoes label {
+    background-color: white;
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
 }
